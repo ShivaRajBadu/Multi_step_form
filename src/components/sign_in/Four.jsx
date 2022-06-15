@@ -6,12 +6,7 @@ import { Review } from "./Review";
 export const FourPage = ({ number }) => {
   const [showReview, setShowReview] = useState(false);
   const [data, setData] = useState({});
-  const {
-    register,
-    handleSubmit,
-
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     setData(data);
     setShowReview(true);

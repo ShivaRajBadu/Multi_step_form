@@ -8,6 +8,8 @@ export const FourPage = ({ number }) => {
   const [data, setData] = useState({});
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
+    if (data.password !== data.confirmPassword)
+      return alert("password does not match");
     setData(data);
     setShowReview(true);
   };
@@ -27,7 +29,7 @@ export const FourPage = ({ number }) => {
                 Create Your Account In Badu's
               </h1>
               <p className="py-2 px-3  text-gray-600 ">
-                To complete your Badu's account setup, please complete{" "}
+                To complete your Badu's account setup, please complete
                 <span className="block"> the following:</span>
               </p>
               <div className="text-center py-2 pb-0 ">
@@ -138,7 +140,7 @@ export const FourPage = ({ number }) => {
           </div>
         ) : (
           <div className="h-full my-4">
-            <Review data={data} />
+            <Review data={data} number={number} />
           </div>
         )}
       </div>

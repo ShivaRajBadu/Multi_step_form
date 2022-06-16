@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
-export const Review = ({ data }) => {
+export const Review = ({ data, number }) => {
   const [isClicked, setIsClicked] = useState(true);
-  console.log(data);
+
   return (
     <>
       {isClicked ? (
@@ -16,7 +16,7 @@ export const Review = ({ data }) => {
           <ul className="text-gray-700">
             <li className="uppercase py-1">
               <h3 className="text-sm">Business phone number</h3>
-              <p className="text-sm px-2 text-orange-400">+977 9848992223</p>
+              <p className="text-sm px-2 text-orange-400">{number}</p>
             </li>
             <li className="py-2">
               <h3 className="uppercase text-sm ">Name of Business</h3>

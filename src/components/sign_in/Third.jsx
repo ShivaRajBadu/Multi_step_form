@@ -15,9 +15,6 @@ export default function Third({ number }) {
       window.confirmationResult
         .confirm(code)
         .then((result) => {
-          console.log(result);
-          const user = result.user;
-          console.log(user);
           setIsVerify(false);
         })
         .catch((err) => console.log(err));
